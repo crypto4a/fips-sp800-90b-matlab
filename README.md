@@ -1,11 +1,11 @@
 ## Readme July 30, 2018.
 Copyright Crypto4A Technologies Inc. 2018
 
-###Introduction
+### Introduction
 
 This directory contains a set of Matlab functions to help characterize the entropy of a noise source as presented in NIST's SP800-90B (January 2018). Every IID test, including the additional chi-square functions and every min-entropy estimate described in the SP800-90B document have been implemented in Matlab and tested using binary data. In addition, a quick, although less precise, test is provided to determine if a dataset is IID. The reader is referred to NIST's SP800-90B document (https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-90B.pdf) for additional details regarding the statistical tests implemented within this repo. Note that every usage of "section x.y.z" in this document refers to the section of the same name in SP800-90B.
 
-###Pointers on how to use these tools:
+### Pointers on how to use these tools:
 
 - Obtain the "tested with" version of Matlab and toolsets (other versions have not been tested):
 	- Matlab 2018a, distrib_computing_toolbox and statistics_toolbox.
@@ -91,7 +91,7 @@ Tests the IID assumption. The Fast_IID_testing_assumption folder contains more e
 **setup.m**: puts everything into Matlab's path. You should run this file before anything else. Otherwise, You will need to manually run every file to use them. This file was taken from a post on a Matlab forum (https://www.mathworks.com/matlabcentral/answers/247180-how-may-i-add-all-subfolders-in-my-matlab-path)
 
 
-###Known Issues
+### Known Issues
 
 - Not able to use a single parfor loop in *all_estimates.m* due to how the variable h is used so multiple parfor loops are used instead, which isn't a very convenient solution.
 - *lrs_estimate.m* can run for a very long time and loose precision if the dataset has really long repeated substrings.
