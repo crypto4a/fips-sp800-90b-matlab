@@ -83,9 +83,9 @@ function [C0, C1, success, h, data_id] = automated_tests(pattern, folder)
     h = zeros(length(data_id), 1);
     for i = 1:length(data_id)
         if success(i) == 1
-            h = most_common_value_estimate(input_data(i,1:data_len));
+            h(i) = most_common_value_estimate(input_data(i,1:data_len));
         else
-            h = min(all_estimates(input_data(i,1:data_len),data_len));
+            h(i) = min(all_estimates(input_data(i,1:data_len),data_len));
         end
     end
 end
